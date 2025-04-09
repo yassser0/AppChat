@@ -1,0 +1,84 @@
+<!DOCTYPE html xmlns:th="http://www.thymeleaf.org">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+    <title>ChatApp - Authentification</title>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo">
+            <h1>ChatApp</h1>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" id="login-tab">Connexion</div>
+            <div class="tab" id="register-tab">Inscription</div>
+        </div>
+        
+        <div class="form-container">
+            <form id="login-form" class="active">
+                <div class="form-group">
+                    <label for="login-email">Adresse email</label>
+                    <input type="email" id="login-email" placeholder="Entrez votre email" required>
+                    <div class="error-message" id="login-email-error">Veuillez entrer une adresse email valide</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Mot de passe</label>
+                    <input type="password" id="login-password" placeholder="Entrez votre mot de passe" required>
+                    <div class="error-message" id="login-password-error">Le mot de passe doit contenir au moins 6 caractères</div>
+                </div>
+                
+                <button type="submit" class="button">Se connecter</button>
+                
+                <div class="forgot-password">
+                    <a href="#">Mot de passe oublié?</a>
+                </div>
+                
+                <div class="social-login">
+                    <p>Ou connectez-vous avec</p>
+                    <div class="social-buttons">
+                        <div class="social-button" id="google-login">G</div>
+                        <div class="social-button" id="facebook-login">F</div>
+                        <div class="social-button" id="twitter-login">T</div>
+                    </div>
+                </div>
+            </form>
+            
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Nom complet</label>
+                    <input type="text" id="register-name" placeholder="Entrez votre nom" required>
+                    <div class="error-message" id="register-name-error">Veuillez entrer votre nom</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">Adresse email</label>
+                    <input type="email" id="register-email" placeholder="Entrez votre email" required>
+                    <div class="error-message" id="register-email-error">Veuillez entrer une adresse email valide</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">Mot de passe</label>
+                    <input type="password" id="register-password" placeholder="Créez un mot de passe" required>
+                    <div class="error-message" id="register-password-error">Le mot de passe doit contenir au moins 6 caractères</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="register-confirm-password" placeholder="Confirmez votre mot de passe" required>
+                    <div class="error-message" id="register-confirm-password-error">Les mots de passe ne correspondent pas</div>
+                </div>
+                
+                <button type="submit" class="button">S'inscrire</button>
+                
+                
+            </form>
+        </div>
+    </div>
+
+    <script th:src="@{/js/auth.js}"></script>
+</body>
+</html>
