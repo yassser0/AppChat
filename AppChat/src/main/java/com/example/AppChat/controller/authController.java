@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 
-public class authController {
-@GetMapping("/auth")
-public String showAuthPagr() {
+public class AuthController {
+@GetMapping("/")
+public String showAuthPage() {
     return "auth";
 }
 
